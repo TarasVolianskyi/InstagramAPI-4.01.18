@@ -5,11 +5,31 @@ public class Users {
     private String name;
     private String lastName;
     private String email;
+    private int Phone;
 
-    public Users(String name, String lastName, String email) {
+    @Override
+    public String toString() {
+        return "Users{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", Phone=" + Phone +
+                '}';
+    }
+
+    public Users(String name, String lastName, String email, int phone) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
+        Phone = phone;
+    }
+
+    public int getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(int phone) {
+        Phone = phone;
     }
 
     public String getName() {
